@@ -1,4 +1,15 @@
-# Developing Data Products Project
+---
+title: "Reproducible pitch presentation"
+author: "Mohit Singh"
+date: "07/02/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Developing Data Products Project
 
 This peer assessed assignment has two parts. First, you will create a Shiny application and deploy it on Rstudio's servers. Second, you will use Slidify or Rstudio Presenter to prepare a reproducible pitch presentation about your application.
 
@@ -42,16 +53,17 @@ This data set contains statistics, in arrests per 100,000 residents for assault,
 
 
 The repository consists of three final files:
-* ui.R
-* server.R
-* README.md
+1. ui.R
+2. server.R
+3. README.md
 
 Data Set: 
-* USArrests
+```{r, eval=TRUE}
+data(USArrests)
+head(USArrests)
+```
 
-The ui.R and server.R are the code for the shiny application: https://msmohitsir136.shinyapps.io/course_project_shiny_application_and_reproducible_pitch/
 
 Application Details:
-* The shiny application is deployed on ShinyApps.io server at: https://msmohitsir136.shinyapps.io/course_project_shiny_application_and_reproducible_pitch/
-* The RStudio presentation slides is published to RPubs at: https://rpubs.com/msmohitsir136/572482
-* Git repository at: https://github.com/msmohitsir136/course_project_shiny_application_and_reproducible_pitch
+1. The shiny application is deployed on ShinyApps.io server at: https://msmohitsir136.shinyapps.io/course_project_shiny_application_and_reproducible_pitch/ 
+2. Git repository at: https://github.com/msmohitsir136/course_project_shiny_application_and_reproducible_pitch
