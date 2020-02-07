@@ -2,11 +2,11 @@
 title: "Reproducible pitch presentation"
 author: "Mohit Singh"
 date: "07/02/2020"
-output: html_document
+output: slidy_presentation
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ## Developing Data Products Project
@@ -47,7 +47,7 @@ Presentation must satisfy the following
 3. It must be hosted on github or Rpubs
 4. It must contained some embedded R code that gets run when slidifying the document
 
-# Application - Violent Crime Rates by US State
+## Application - Violent Crime Rates by US State
 
 This data set contains statistics, in arrests per 100,000 residents for assault, murder, and rape in each of the 50 US states in 1973. Also given is the percent of the population living in urban areas.
 
@@ -57,13 +57,15 @@ The repository consists of three final files:
 2. server.R
 3. README.md
 
-Data Set: 
+## Data Set: 
 ```{r, eval=TRUE}
 data(USArrests)
 head(USArrests)
 ```
 
 
-Application Details:
+## Application Details:
 1. The shiny application is deployed on ShinyApps.io server at: https://msmohitsir136.shinyapps.io/course_project_shiny_application_and_reproducible_pitch/ 
 2. Git repository at: https://github.com/msmohitsir136/course_project_shiny_application_and_reproducible_pitch
+
+Thank You !!!
