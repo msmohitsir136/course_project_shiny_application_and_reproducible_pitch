@@ -62,13 +62,13 @@ The repository consists of three final files:
 ## Application artifect
 
 ### Dataset
-```{r, eval=TRUE}
+```{r, eval=TRUE, echo=TRUE}
 data(USArrests)
 head(USArrests)
 ```
 
 ### server.R
-```{r, eval=FALSE}
+```{r, eval=FALSE, echo=TRUE}
 library(shiny)
 suppressPackageStartupMessages(library(googleVis))
 data("USArrests")
@@ -83,7 +83,7 @@ shinyServer(function(input, output) {
 ```
 
 ### ui.R
-```{r, eval=FALSE}
+```{r, eval=FALSE, echo=TRUE}
 library(shiny)
 data("USArrests")
 

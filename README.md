@@ -53,5 +53,5 @@ The ui.R and server.R are the code for the shiny application: https://msmohitsir
 
 Application Details:
 * The shiny application is deployed on ShinyApps.io server at: https://msmohitsir136.shinyapps.io/course_project_shiny_application_and_reproducible_pitch/
-* The RStudio presentation slides is published to RPubs at: https://rpubs.com/msmohitsir136/572482
+* The RStudio presentation slides is published to RPubs at: https://rpubs.com/msmohitsir136/574319
 * Git repository at: https://github.com/msmohitsir136/course_project_shiny_application_and_reproducible_pitch
