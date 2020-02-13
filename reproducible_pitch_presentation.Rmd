@@ -53,14 +53,56 @@ This data set contains statistics, in arrests per 100,000 residents for assault,
 
 
 The repository consists of three final files:
-1. ui.R
+1. Dataset
 2. server.R
-3. README.md
+3. ui.R
+4. README.md
 
-## Data Set: 
+
+## Application artifect
+
+### Dataset
 ```{r, eval=TRUE}
 data(USArrests)
 head(USArrests)
+```
+
+### server.R
+```{r, eval=FALSE}
+library(shiny)
+suppressPackageStartupMessages(library(googleVis))
+data("USArrests")
+
+shinyServer(function(input, output) {
+  state <- reactive({input$state})
+  record <- reactive(USArrests[rownames(USArrests) == state(), ])
+  #df <- reactive(data.frame(crime=colnames(record()), val=record()))
+  columnChart <- reactive(gvisColumnChart(record(), options=list(width=400, height=450)))
+  output$plot <- renderGvis(columnChart())
+})
+```
+
+### ui.R
+```{r, eval=FALSE}
+library(shiny)
+data("USArrests")
+
+shinyUI(fluidPage(
+  titlePanel('US crime data in each states'),
+  tags$p('This application gives the visulization of crimes in US states. To get crime information in require state user has to select the state in given drop-down.'),
+  
+  sidebarLayout(
+    sidebarPanel(
+      selectInput(inputId='state', label = 'State', choices = row.names(USArrests), selected = 'State'),
+      # selectInput(inputId='crime', label = 'crime', choices = c("Murder", "Assault", "UrbanPop", "Rape"), selected = 'Crime')
+    ),
+  
+    mainPanel(
+      h3('Graph of crime in US states'),
+      htmlOutput('plot')
+    )
+  )
+))
 ```
 
 

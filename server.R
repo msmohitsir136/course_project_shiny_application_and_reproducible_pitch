@@ -8,7 +8,6 @@ shinyServer(function(input, output) {
   record <- reactive(USArrests[rownames(USArrests) == state(), ])
   #df <- reactive(data.frame(crime=colnames(record()), val=record()))
   columnChart <- reactive(gvisColumnChart(record(), options=list(width=400, height=450)))
-  
   output$plot <- renderGvis(columnChart())
 
 })
